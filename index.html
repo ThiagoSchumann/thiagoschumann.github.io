@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thiagoschumann's portfolio</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Adiciona margem ao topo das seções ao rolar */
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        /* Estilo para o botão de download de CV */
+        .btn-cv {
+            border-bottom: 2px solid #4CAF50;
+            color: white;
+        }
+
+        .btn-cv:hover {
+            color: #4CAF50;
+            border-color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+    <header class="bg-gray-800 text-white fixed w-full z-10">
+        <div class="container mx-auto p-5 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/favicon.png" class="w-10 h-10 mr-2" alt="logo">
+                <h1 class="text-3xl font-bold">Thiago Schumann</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-gray-400">Sobre</a></li>
+                    <li><a href="#experience" class="hover:text-gray-400">Experiência</a></li>
+                    <li><a href="#education" class="hover:text-gray-400">Educação</a></li>
+                    <li><a href="#skills" class="hover:text-gray-400">Habilidades</a></li>
+                    <li><a href="#contact" class="hover:text-gray-400">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto pt-24 pb-10 flex flex-col items-center">
+        <section class="flex flex-col md:flex-row items-center p-6 my-6 text-center md:text-left">
+            <img src="images/profile.jpg" alt="Foto de Thiago" class="w-48 h-48 rounded-full mx-auto mb-4 md:mb-0 md:mr-6">
+            <div>
+                <h2 class="text-2xl font-semibold">Thiago</h2>
+                <p class="text-gray-400">Engenheiro de Software especializado em sistemas ERP com experiência em Delphi, SQL, Python, .NET e Java.</p>
+                <div class="flex justify-center md:justify-start mt-4">
+                    <a id="download-cv" href="resources/Thiago-Schumann-CV.pdf" class="btn-cv px-4 py-2 rounded hover:text-gray-400 mr-4">Download CV</a>
+                    <a href="#contact" class="btn-cv px-4 py-2 rounded hover:text-gray-400">Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="p-6 my-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Sobre</h2>
+            <p>Formado em Engenharia de Software pela Universidade do Estado de Santa Catarina (UDESC), tenho uma carreira consolidada como Software Developer.</p>
+        </section>
+
+        <section id="experience" class="p-6 my-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Experiência</h2>
+            <h3 class="text-xl font-semibold">Senior Software Developer - Senior Sistemas</h3>
+            <p class="text-gray-400"><strong>Período:</strong> Jun de 2022 - o momento</p>
+            <ul class="list-disc ml-5 mt-2">
+                <li>Manutenção e aprimoramento de módulos críticos do sistema ERP.</li>
+            </ul>
+        </section>
+
+        <section id="education" class="p-6 my-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Educação</h2>
+            <h3 class="text-xl font-semibold">Universidade do Estado de Santa Catarina (UDESC)</h3>
+            <p class="text-gray-400"><strong>Curso:</strong> Bacharelado em Engenharia de Software</p>
+        </section>
+
+        <section id="skills" class="p-6 my-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Habilidades</h2>
+            <ul class="list-disc ml-5">
+                <li>Delphi</li>
+                <li>SQL</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="p-6 my-6 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Contato</h2>
+            <div class="flex justify-center md:justify-start space-x-2 mt-4">
+                <a href="mailto:thiagoarturschumann@gmail.com" class="text-white px-2 py-2 rounded-full">
+                    <img src="https://skillicons.dev/icons?i=gmail" class="w-8 h-8" alt="Gmail">
+                </a>
+                <a href="https://www.linkedin.com/in/thiagoschumann/" target="_blank" class="text-white px-2 py-2 rounded-full">
+                    <img src="https://skillicons.dev/icons?i=linkedin" class="w-8 h-8" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/ThiagoSchumann" target="_blank" class="text-white px-2 py-2 rounded-full">
+                    <img src="https://skillicons.dev/icons?i=github" class="w-8 h-8" alt="GitHub">
+                </a>
+                <a href="https://wa.me/5547991254268" target="_blank" class="text-white px-2 py-2 rounded-full">
+                    <img src="https://github.com/TIM168/skill_icon/blob/main/WhatsApp/whatsapp.png?raw=true" class="w-8 h-8" alt="WhatsApp">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2024 Thiago Artur Schumann. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('download-cv').addEventListener('click', function(e) {
+            e.preventDefault();
+            fetch('resources/Thiago-Schumann-CV.pdf')
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'Thiago-Schumann-CV.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(() => alert('Falha ao baixar o arquivo.'));
+        });
+    </script>
+</body>
+
+</html>
