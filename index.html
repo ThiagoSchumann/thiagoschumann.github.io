@@ -4,130 +4,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thiagoschumann's portfolio</title>
+    <title>Portfolio de Thiago Schumann</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Adiciona margem ao topo das seções ao rolar */
-        section {
-            scroll-margin-top: 80px;
-        }
-
-        /* Estilo para o botão de download de CV */
-        .btn-cv {
-            border-bottom: 2px solid #4CAF50;
-            color: white;
-        }
-
-        .btn-cv:hover {
-            color: #4CAF50;
-            border-color: #4CAF50;
-        }
-    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<body class="bg-gray-900 text-gray-200">
-    <header class="bg-gray-800 text-white fixed w-full z-10">
+<body>
+    <header class="w-full z-10">
         <div class="container mx-auto p-5 flex justify-between items-center">
             <div class="flex items-center">
                 <img src="images/favicon.png" class="w-10 h-10 mr-2" alt="logo">
-                <h1 class="text-3xl font-bold">Thiago Schumann</h1>
+                <h1 class="text-2xl font-bold">Thiago Schumann</h1>
             </div>
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="#about" class="hover:text-gray-400">Sobre</a></li>
-                    <li><a href="#experience" class="hover:text-gray-400">Experiência</a></li>
-                    <li><a href="#education" class="hover:text-gray-400">Educação</a></li>
-                    <li><a href="#skills" class="hover:text-gray-400">Habilidades</a></li>
-                    <li><a href="#contact" class="hover:text-gray-400">Contato</a></li>
+                    <li><a href="#about" class="hover:text-gray-400" data-en="About" data-pt="Sobre">Sobre</a></li>
+                    <li><a href="#experience" class="hover:text-gray-400" data-en="Experience"
+                            data-pt="Experiência">Experiência</a></li>
+                    <li><a href="#education" class="hover:text-gray-400" data-en="Education"
+                            data-pt="Educação">Educação</a></li>
+                    <li><a href="#skills" class="hover:text-gray-400" data-en="Skills"
+                            data-pt="Habilidades">Habilidades</a></li>
+                    <li><a href="#certifications" class="hover:text-gray-400" data-en="Certifications"
+                            data-pt="Certificações">Certificações</a></li>
+                    <li><a href="#contact" class="hover:text-gray-400" data-en="Contact" data-pt="Contato">Contato</a>
+                    </li>
+                    <li><a href="#" class="language-toggle" data-lang="en"><img src="images/flag-us.svg" class="w-6 h-6"
+                                alt="English"></a></li>
+                    <li><a href="#" class="language-toggle" data-lang="pt"><img src="images/flag-br.svg" class="w-6 h-6"
+                                alt="Português"></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container mx-auto pt-24 pb-10 flex flex-col items-center">
-        <section class="flex flex-col md:flex-row items-center p-6 my-6 text-center md:text-left">
-            <img src="images/profile.jpg" alt="Foto de Thiago" class="w-48 h-48 rounded-full mx-auto mb-4 md:mb-0 md:mr-6">
+    <main id="about" class="container mx-auto pt-5 pb-10 flex flex-col items-center">
+        <section class="flex flex-col md:flex-row items-center p-6 my-6 text-center md:text-left w-full md:w-2/3">
+            <img src="images/profile.jpg" alt="Foto de Thiago"
+                class="w-48 h-48 rounded-full mx-auto mb-4 md:mb-0 md:mr-6 profile-image">
             <div>
-                <h2 class="text-2xl font-semibold">Thiago</h2>
-                <p class="text-gray-400">Engenheiro de Software especializado em sistemas ERP com experiência em Delphi, SQL, Python, .NET e Java.</p>
+                <p class="text-sm text-gray-400 mb-2" data-en="Software Engineer" data-pt="Engenheiro de Software">
+                    Engenheiro de Software</p>
+                <h2 class="text-2xl font-semibold" data-en="Thiago Artur Schumann" data-pt="Thiago Artur Schumann">
+                    Thiago Artur Schumann</h2>
+                <p class="text-gray-400"
+                    data-en="I’m a software engineer with extensive experience in backend development. I love new challenges, especially learning new programming languages. My career spans from technical support to leading technical teams and developing complex systems. I strive for continuous improvement and impactful projects."
+                    data-pt="Sou um engenheiro de software com ampla experiência em desenvolvimento back-end. Sou motivado por novos desafios, especialmente aprender novas linguagens de programação. Minha carreira vai de suporte técnico a liderar equipes e desenvolver sistemas complexos. Busco sempre a melhoria contínua e projetos impactantes.">
+                    Sou um engenheiro de software com ampla experiência em desenvolvimento back-end. Sou motivado
+                    pornovos desafios, especialmente aprender novas linguagens de programação. Minha carreira vai de
+                    suporte técnico a liderar equipes e desenvolver sistemas complexos. Busco sempre a melhoria contínua
+                    e projetos impactantes.
+                </p>
                 <div class="flex justify-center md:justify-start mt-4">
-                    <a id="download-cv" href="resources/Thiago-Schumann-CV.pdf" class="btn-cv px-4 py-2 rounded hover:text-gray-400 mr-4">Download CV</a>
-                    <a href="#contact" class="btn-cv px-4 py-2 rounded hover:text-gray-400">Contato</a>
+                    <a id="download-cv" href="resources/Thiago-Schumann-CV.pdf"
+                        class="btn btn-cv shadow-lg hover:shadow-xl transition-all duration-700 ease-in-out mr-4"
+                        data-en="Download CV" data-pt="Download CV">
+                        Download CV
+                    </a>
+                    <a href="#contact"
+                        class="btn btn-contact shadow-lg hover:shadow-xl transition-all duration-700 ease-in-out"
+                        data-en="Contact" data-pt="Contato">
+                        Contato
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="p-6 my-6 w-full md:w-2/3">
-            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Sobre</h2>
-            <p>Formado em Engenharia de Software pela Universidade do Estado de Santa Catarina (UDESC), tenho uma carreira consolidada como Software Developer.</p>
-        </section>
-
         <section id="experience" class="p-6 my-6 w-full md:w-2/3">
-            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Experiência</h2>
-            <h3 class="text-xl font-semibold">Senior Software Developer - Senior Sistemas</h3>
-            <p class="text-gray-400"><strong>Período:</strong> Jun de 2022 - o momento</p>
-            <ul class="list-disc ml-5 mt-2">
-                <li>Manutenção e aprimoramento de módulos críticos do sistema ERP.</li>
-            </ul>
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center">
+                    <img src="images/icons8-trabalho-100.png" alt="Experience Icon" class="w-10 h-10 mr-2">
+                    <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 highlight" data-en="Experience"
+                        data-pt="Experiência">Experiência</h2>
+                </div>
+            </div>
+
+            <div class="experience-content">
+                <!-- Senior Software Developer - Senior Sistemas -->
+                <div class="experience-item mt-8 flex items-start">
+                    <img src="images/icons8-desenvolvedor-100.png" alt="Developer Icon" class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold" data-en="Senior Software Developer - Senior Sistemas"
+                            data-pt="Senior Software Developer - Senior Sistemas">Senior Software Developer - Senior
+                            Sistemas</h3>
+                        <p class="text-gray-400" data-en="Period: Jun 2022 - present"
+                            data-pt="Período: Jun de 2022 - o momento">Período: Jun de 2022 - o momento</p>
+                        <ul class="list-disc ml-5 mt-2">
+                            <li data-en="Maintenance and improvement of critical ERP system modules."
+                                data-pt="Manutenção e aprimoramento de módulos críticos do sistema ERP.">Manutenção e
+                                aprimoramento de módulos críticos do sistema ERP.</li>
+                            <li data-en="Development and integration of APIs, execution of complex SQL queries, and creation of detailed test cases."
+                                data-pt="Desenvolvimento e integração de APIs, execução de consultas SQL complexas e criação de casos de teste detalhados.">
+                                Desenvolvimento e integração de APIs, execução de consultas SQL complexas e criação de
+                                casos de teste detalhados.</li>
+                            <li data-en="Implementation of integrations with internal and third-party systems, enhancing system functionality and interoperability."
+                                data-pt="Implementação de integrações com sistemas internos e de terceiros, aprimorando a funcionalidade e a interoperabilidade dos sistemas.">
+                                Implementação de integrações com sistemas internos e de terceiros, aprimorando a
+                                funcionalidade e a interoperabilidade dos sistemas.</li>
+                            <li data-en="Effective resolution of complex problems reported by clients, in collaboration with support teams."
+                                data-pt="Resolução eficaz de problemas complexos reportados pelos clientes, em colaboração com as equipes de suporte.">
+                                Resolução eficaz de problemas complexos reportados pelos clientes, em colaboração com as
+                                equipes de suporte.</li>
+                            <li data-en="Active participation in Agile processes, optimizing software development in response to changing requirements."
+                                data-pt="Participação ativa em processos Agile, otimizando o desenvolvimento de software frente às mudanças de requisitos.">
+                                Participação ativa em processos Agile, otimizando o desenvolvimento de software frente
+                                às mudanças de requisitos.</li>
+                            <li data-en="Implementation of Continuous Delivery practices and continuous integration to streamline software delivery."
+                                data-pt="Implementação de práticas de Continuous Delivery e integração contínua para agilizar a entrega de software.">
+                                Implementação de práticas de Continuous Delivery e integração contínua para agilizar a
+                                entrega de software.</li>
+                            <li data-en="Collaborated with UX, Quality, and Product Owners to align software with business strategies."
+                                data-pt="Trabalho conjunto com equipes de UX, Qualidade e Product Owners para alinhar software com estratégias de negócios.">
+                                Trabalho conjunto com equipes de UX, Qualidade e Product Owners para alinhar software
+                                com estratégias de negócios.</li>
+                        </ul>
+                        <span onclick="toggleList(this)" class="text-gray-500 cursor-pointer"
+                            style="display: inline-block;" data-en="See more" data-pt="Veja mais"
+                            data-en-less="See less" data-pt-less="Veja menos">Veja mais</span>
+                    </div>
+                </div>
+
+                <!-- Tech Lead - Singular Sistemas -->
+                <div class="experience-item mt-8 flex items-start">
+                    <img src="images/icons8-lider-100.png" alt="Tech Lead Icon" class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold" data-en="Tech Lead - Singular Sistemas"
+                            data-pt="Tech Lead - Singular Sistemas">Tech Lead - Singular Sistemas</h3>
+                        <p class="text-gray-400" data-en="Period: May 2021 - May 2022"
+                            data-pt="Período: Mai de 2021 - Mai de 2022">Período: Mai de 2021 - Mai de 2022</p>
+                        <ul class="list-disc ml-5 mt-2">
+                            <li data-en="Technical leadership for development and testing teams, ensuring high-quality software solutions."
+                                data-pt="Liderança técnica para as equipes de desenvolvimento e testes, garantindo a entrega de soluções de software de alta qualidade.">
+                                Liderança técnica para as equipes de desenvolvimento e testes, garantindo a entrega de
+                                soluções de software de alta qualidade.</li>
+                            <li data-en="Active participation in all phases of the software development lifecycle, from requirements analysis to implementation and testing."
+                                data-pt="Participação ativa em todas as fases do ciclo de vida do desenvolvimento de software, desde a análise de requisitos até a implementação e testes.">
+                                Participação ativa em todas as fases do ciclo de vida do desenvolvimento de software,
+                                desde a análise de requisitos até a implementação e testes.</li>
+                            <li data-en="Continuous technical skills improvement, especially in Delphi, SQL, Python, and Django, applied in advanced ERP solutions development."
+                                data-pt="Aprimoramento contínuo das minhas habilidades técnicas, especialmente em Delphi, SQL, Python e Django, aplicando esses conhecimentos no desenvolvimento de soluções avançadas para sistemas ERP.">
+                                Aprimoramento contínuo das minhas habilidades técnicas, especialmente em Delphi, SQL,
+                                Python e Django, aplicando esses conhecimentos no desenvolvimento de soluções avançadas
+                                para sistemas ERP.</li>
+                            <li data-en="Close collaboration with various company areas, aligning development and testing projects with business strategies and client needs."
+                                data-pt="Colaboração estreita com diversas áreas da empresa, alinhando os projetos de desenvolvimento e testes com as estratégias de negócio e as necessidades dos clientes.">
+                                Colaboração estreita com diversas áreas da empresa, alinhando os projetos de
+                                desenvolvimento e testes com as estratégias de negócio e as necessidades dos clientes.
+                            </li>
+                            <li data-en="Implementation of Agile methodologies and continuous development practices to increase team efficiency and product quality."
+                                data-pt="Implementação de metodologias ágeis e práticas de desenvolvimento contínuo para aumentar a eficiência da equipe e a qualidade do produto final.">
+                                Implementação de metodologias ágeis e práticas de desenvolvimento contínuo para aumentar
+                                a eficiência da equipe e a qualidade do produto final.</li>
+                            <li data-en="Mentorship and talent development within the teams, fostering a continuous learning environment."
+                                data-pt="Mentoria e desenvolvimento de talentos dentro das equipes, fomentando um ambiente de aprendizado contínuo e aprimoramento das habilidades técnicas e de gestão.">
+                                Mentoria e desenvolvimento de talentos dentro das equipes, fomentando um ambiente de
+                                aprendizado contínuo e aprimoramento das habilidades técnicas e de gestão.</li>
+                        </ul>
+                        <span onclick="toggleList(this)" class="text-gray-500 cursor-pointer"
+                            style="display: inline-block;" data-en="See more" data-pt="Veja mais"
+                            data-en-less="See less" data-pt-less="Veja menos">Veja mais</span>
+                    </div>
+                </div>
+
+                <!-- Desenvolvedor de Software - Singular Sistemas -->
+                <div class="experience-item mt-8 flex items-start">
+                    <img src="images/icons8-desenvolvedor-100.png" alt="Software Developer Icon"
+                        class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold" data-en="Desenvolvedor de Software - Singular Sistemas"
+                            data-pt="Desenvolvedor de Software - Singular Sistemas">Desenvolvedor de Software - Singular
+                            Sistemas</h3>
+                        <p class="text-gray-400" data-en="Period: Oct 2017 - May 2021"
+                            data-pt="Período: Out de 2017 - Mai de 2021">Período: Out de 2017 - Mai de 2021</p>
+                        <ul class="list-disc ml-5 mt-2">
+                            <li data-en="Software development using Delphi and Firebird, ensuring robust and efficient ERP system solutions."
+                                data-pt="Desenvolvimento de software utilizando Delphi e Firebird, garantindo a entrega de soluções robustas e eficientes para sistemas ERP.">
+                                Desenvolvimento de software utilizando Delphi e Firebird, garantindo a entrega de
+                                soluções robustas e eficientes para sistemas ERP.</li>
+                            <li data-en="Web application implementation using Python with Django, contributing to product offerings expansion and modernization."
+                                data-pt="Implementação de aplicações web usando Python com Django, contribuindo para a expansão e modernização de nossas ofertas de produtos.">
+                                Implementação de aplicações web usando Python com Django, contribuindo para a expansão e
+                                modernização de nossas ofertas de produtos.</li>
+                            <li data-en="Active participation in client meetings for requirement elicitation, ensuring solutions meet specific needs."
+                                data-pt="Participação ativa em reuniões com clientes para a elicitação de requisitos, garantindo que as soluções desenvolvidas atendam às suas necessidades específicas.">
+                                Participação ativa em reuniões com clientes para a elicitação de requisitos, garantindo
+                                que as soluções desenvolvidas atendam às suas necessidades específicas.</li>
+                            <li data-en="Project design and planning for new features and system improvements, optimizing user experience and operational efficiency."
+                                data-pt="Desenho e planejamento de projetos para a introdução de novas funcionalidades e melhorias nos sistemas, visando otimizar a experiência do usuário e a eficiência operacional.">
+                                Desenho e planejamento de projetos para a introdução de novas funcionalidades e
+                                melhorias nos sistemas, visando otimizar a experiência do usuário e a eficiência
+                                operacional.</li>
+                            <li data-en="Legacy systems refactoring and modernization, enhancing maintainability and performance."
+                                data-pt="Refatoração e modernização de sistemas legados, melhorando a manutenibilidade e a performance dos sistemas existentes.">
+                                Refatoração e modernização de sistemas legados, melhorando a manutenibilidade e a
+                                performance dos sistemas existentes.</li>
+                            <li data-en="Internal process optimization through Agile practices, continuously improving team efficiency and product quality."
+                                data-pt="Otimização de processos internos, aplicando práticas de desenvolvimento ágil para melhorar continuamente a eficiência da equipe e a qualidade do produto.">
+                                Otimização de processos internos, aplicando práticas de desenvolvimento ágil para
+                                melhorar continuamente a eficiência da equipe e a qualidade do produto.</li>
+                        </ul>
+                        <span onclick="toggleList(this)" class="text-gray-500 cursor-pointer"
+                            style="display: inline-block;" data-en="See more" data-pt="Veja mais"
+                            data-en-less="See less" data-pt-less="Veja menos">Veja mais</span>
+                    </div>
+                </div>
+
+                <!-- Analista de Suporte - Singular Sistemas -->
+                <div class="experience-item mt-8 flex items-start">
+                    <img src="images/icons8-suporte-100.png" alt="Support Analyst Icon" class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold" data-en="Analista de Suporte - Singular Sistemas"
+                            data-pt="Analista de Suporte - Singular Sistemas">Analista de Suporte - Singular Sistemas
+                        </h3>
+                        <p class="text-gray-400" data-en="Period: Jun 2014 - Oct 2017"
+                            data-pt="Período: Jun de 2014 - Out de 2017">Período: Jun de 2014 - Out de 2017</p>
+                        <ul class="list-disc ml-5 mt-2">
+                            <li data-en="Provided specialized support to clients, assisting with ERP software use and technical issue resolution."
+                                data-pt="Prestar suporte especializado aos clientes, auxiliando na utilização do software ERP e na solução de problemas técnicos.">
+                                Prestar suporte especializado aos clientes, auxiliando na utilização do software ERP e
+                                na solução de problemas técnicos.</li>
+                            <li data-en="Managed and resolved issues related to various fiscal documents."
+                                data-pt="Gerenciar e resolver questões relacionadas a uma variedade de documentos fiscais.">
+                                Gerenciar e resolver questões relacionadas a uma variedade de documentos fiscais.</li>
+                            <li data-en="Created support tickets based on client communications, ensuring effective and prompt solutions."
+                                data-pt="Criar demandas e abrir tickets de suporte com base nas comunicações com os clientes, garantindo atendimento eficaz e soluções rápidas.">
+                                Criar demandas e abrir tickets de suporte com base nas comunicações com os clientes,
+                                garantindo atendimento eficaz e soluções rápidas.</li>
+                            <li data-en="Executed SQL database queries and updates, providing detailed analyses and data adjustments."
+                                data-pt="Executar consultas e atualizações em bancos de dados SQL, fornecendo análises detalhadas e ajustes de dados.">
+                                Executar consultas e atualizações em bancos de dados SQL, fornecendo análises detalhadas
+                                e ajustes de dados.</li>
+                            <li data-en="Developed and implemented batch scripts and Delphi programs to optimize backup routines and process maintenance."
+                                data-pt="Desenvolver e implementar scripts batch e programas em Delphi para otimizar rotinas de backup e manutenção de processos.">
+                                Desenvolver e implementar scripts batch e programas em Delphi para otimizar rotinas de
+                                backup e manutenção de processos.</li>
+                            <li data-en="Collaborated with development teams to inform software improvements based on client feedback."
+                                data-pt="Colaborar com equipes de desenvolvimento para informar melhorias no software com base no feedback dos clientes.">
+                                Colaborar com equipes de desenvolvimento para informar melhorias no software com base no
+                                feedback dos clientes.</li>
+                        </ul>
+                        <span onclick="toggleList(this)" class="text-gray-500 cursor-pointer"
+                            style="display: inline-block;" data-en="See more" data-pt="Veja mais"
+                            data-en-less="See less" data-pt-less="Veja menos">Veja mais</span>
+                    </div>
+                </div>
+
+                <!-- Técnico de Suporte em TI - Universidade do Estado de Santa Catarina -->
+                <div class="experience-item mt-8 flex items-start">
+                    <img src="images/icons8-online-maintenance-100.png" alt="IT Support Technician Icon"
+                        class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold"
+                            data-en="Técnico de Suporte em TI - Universidade do Estado de Santa Catarina"
+                            data-pt="Técnico de Suporte em TI - Universidade do Estado de Santa Catarina">Técnico de
+                            Suporte em TI - Universidade do Estado de Santa Catarina</h3>
+                        <p class="text-gray-400" data-en="Period: Feb 2013 - Feb 2014"
+                            data-pt="Período: Fev de 2013 - Fev de 2014">Período: Fev de 2013 - Fev de 2014</p>
+                        <ul class="list-disc ml-5 mt-2">
+                            <li data-en="Managed domain user control, ensuring data security and efficient information access."
+                                data-pt="Gerenciamento e controle de usuários de domínio, assegurando a segurança dos dados e a eficiência no acesso às informações.">
+                                Gerenciamento e controle de usuários de domínio, assegurando a segurança dos dados e a
+                                eficiência no acesso às informações.</li>
+                            <li data-en="Contributed to university website maintenance and updates using Java technologies."
+                                data-pt="Contribuição para a manutenção e atualização do site da universidade, utilizando tecnologias Java.">
+                                Contribuição para a manutenção e atualização do site da universidade, utilizando
+                                tecnologias Java.</li>
+                            <li data-en="Provided comprehensive technical support to university users, including professors, students, and staff."
+                                data-pt="Fornecimento de suporte técnico abrangente aos usuários da universidade, incluindo professores, estudantes e funcionários.">
+                                Fornecimento de suporte técnico abrangente aos usuários da universidade, incluindo
+                                professores, estudantes e funcionários.</li>
+                            <li data-en="Implemented and maintained IT systems and software solutions, contributing to continuous technological process improvement."
+                                data-pt="Implementação e manutenção de sistemas de TI e soluções de software, contribuindo para a melhoria contínua dos processos tecnológicos da instituição.">
+                                Implementação e manutenção de sistemas de TI e soluções de software, contribuindo para a
+                                melhoria contínua dos processos tecnológicos da instituição.</li>
+                        </ul>
+                        <span onclick="toggleList(this)" class="text-gray-500 cursor-pointer"
+                            style="display: inline-block;" data-en="See more" data-pt="Veja mais"
+                            data-en-less="See less" data-pt-less="Veja menos">Veja mais</span>
+                    </div>
+                </div>
+
+                <!-- Técnico de Suporte em TI - Sidron Informática -->
+                <div class="experience-item mt-8 flex items-start">
+                    <img src="images/icons8-online-maintenance-100.png" alt="IT Support Technician Icon"
+                        class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold" data-en="Técnico de Suporte em TI - Sidron Informática"
+                            data-pt="Técnico de Suporte em TI - Sidron Informática">Técnico de Suporte em TI - Sidron
+                            Informática</h3>
+                        <p class="text-gray-400" data-en="Period: Mar 2012 - Jan 2013"
+                            data-pt="Período: Mar de 2012 - Jan de 2013">Período: Mar de 2012 - Jan de 2013</p>
+                        <ul class="list-disc ml-5 mt-2">
+                            <li data-en="Diagnosed and repaired technical issues in hardware and software, ensuring efficient operation and longevity."
+                                data-pt="Diagnosticar e reparar problemas técnicos em hardware e software, garantindo a operação eficiente e a longevidade dos equipamentos.">
+                                Diagnosticar e reparar problemas técnicos em hardware e software, garantindo a operação
+                                eficiente e a longevidade dos equipamentos.</li>
+                            <li data-en="Performed preventive maintenance on equipment to ensure continuous functionality and reduce failure risk."
+                                data-pt="Realizar manutenção preventiva em equipamentos para assegurar a funcionalidade contínua e reduzir o risco de falhas.">
+                                Realizar manutenção preventiva em equipamentos para assegurar a funcionalidade contínua
+                                e reduzir o risco de falhas.</li>
+                            <li data-en="Configured and maintained residential and business networks, ensuring robust network security."
+                                data-pt="Configurar e manter redes residenciais e empresariais, garantindo segurança de rede robusta.">
+                                Configurar e manter redes residenciais e empresariais, garantindo segurança de rede
+                                robusta.</li>
+                            <li data-en="Provided technical assistance and support to clients, solving issues effectively both on-site and remotely."
+                                data-pt="Prestar assistência técnica e suporte ao cliente, tanto de forma presencial quanto remota, solucionando dúvidas e problemas de maneira eficaz.">
+                                Prestar assistência técnica e suporte ao cliente, tanto de forma presencial quanto
+                                remota, solucionando dúvidas e problemas de maneira eficaz.</li>
+                            <li data-en="Developed client communication and relationship skills, providing friendly and professional service."
+                                data-pt="Desenvolver habilidades de comunicação e relacionamento com o cliente, proporcionando um serviço amigável e profissional.">
+                                Desenvolver habilidades de comunicação e relacionamento com o cliente, proporcionando um
+                                serviço amigável e profissional.</li>
+                        </ul>
+                        <span onclick="toggleList(this)" class="text-gray-500 cursor-pointer"
+                            style="display: inline-block;" data-en="See more" data-pt="Veja mais"
+                            data-en-less="See less" data-pt-less="Veja menos">Veja mais</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="education" class="p-6 my-6 w-full md:w-2/3">
-            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Educação</h2>
-            <h3 class="text-xl font-semibold">Universidade do Estado de Santa Catarina (UDESC)</h3>
-            <p class="text-gray-400"><strong>Curso:</strong> Bacharelado em Engenharia de Software</p>
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center">
+                    <img src="images/icons8-educação-100.png" alt="Education Icon" class="w-10 h-10 mr-2">
+                    <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 highlight" data-en="Education"
+                        data-pt="Educação">Educação</h2>
+                </div>
+            </div>
+
+            <div class="education-content">
+                <!-- Bachelor's in Software Engineering - Universidade do Estado de Santa Catarina (UDESC) -->
+                <div class="education-item mt-8 flex items-start">
+                    <img src="images/icons8-software-engineering-100.png" alt="Graduation Cap Icon"
+                        class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold" data-en="State University of Santa Catarina (UDESC)"
+                            data-pt="Universidade do Estado de Santa Catarina (UDESC)">Universidade do Estado de Santa
+                            Catarina (UDESC)</h3>
+                        <p class="text-gray-400" data-en="Bachelor Degree, Software Engineering, 2019 - 2023"
+                            data-pt="Bacharelado em Engenharia de Software, 2019 - 2023">Bacharelado em Engenharia de
+                            Software, 2019 - 2023</p>
+                        <p class="text-gray-400 mt-2"
+                            data-en="My journey in the Software Engineering program at UDESC was transformative. From the start, I developed technical skills and an ethical mindset. I studied applied mathematics, computer architecture, and operating systems, building a solid foundation. Delving into programming, from fundamentals to complex systems, was rewarding. Practical projects allowed me to apply theoretical knowledge and see tangible results. Every stage of software development, including analysis, design, testing, and maintenance, was explored in detail. Exploring artificial intelligence and participating in multidisciplinary projects broadened my vision and prepared me for real-world challenges. The collaborative environment and support from professors and peers were essential for my growth. I developed technical skills, professional ethics, and an entrepreneurial mindset, ready to contribute innovative solutions to the market."
+                            data-pt="Minha jornada no programa de Engenharia de Software da UDESC foi transformadora. Desde o início, desenvolvi habilidades técnicas e uma mentalidade ética. Estudei matemática aplicada, arquitetura de computadores e sistemas operacionais, construindo uma base sólida. Mergulhar na programação, desde os fundamentos até sistemas complexos, foi gratificante. Projetos práticos me permitiram aplicar o conhecimento teórico e ver resultados tangíveis. Cada etapa do desenvolvimento de software, incluindo análise, design, teste e manutenção, foi explorada em detalhes. Explorar inteligência artificial e participar de projetos multidisciplinares ampliou minha visão e me preparou para desafios do mundo real. O ambiente colaborativo e o apoio de professores e colegas foram essenciais para meu crescimento. Desenvolvi habilidades técnicas, ética profissional e uma mentalidade empreendedora, pronta para contribuir com soluções inovadoras para o mercado.">
+                            Minha jornada no programa de Engenharia de Software da UDESC foi transformadora. Desde o
+                            início, desenvolvi habilidades técnicas e uma mentalidade ética. Estudei matemática
+                            aplicada, arquitetura de computadores e sistemas operacionais, construindo uma base sólida.
+                            Mergulhar na programação, desde os fundamentos até sistemas complexos, foi gratificante.
+                            Projetos práticos me permitiram aplicar o conhecimento teórico e ver resultados tangíveis.
+                            Cada etapa do desenvolvimento de software, incluindo análise, design, teste e manutenção,
+                            foi explorada em detalhes. Explorar inteligência artificial e participar de projetos
+                            multidisciplinares ampliou minha visão e me preparou para desafios do mundo real. O ambiente
+                            colaborativo e o apoio de professores e colegas foram essenciais para meu crescimento.
+                            Desenvolvi habilidades técnicas, ética profissional e uma mentalidade empreendedora, pronta
+                            para contribuir com soluções inovadoras para o mercado.</p>
+                    </div>
+                </div>
+
+                <!-- Bachelor's in Information Systems - Universidade do Estado de Santa Catarina (UDESC) -->
+                <div class="education-item mt-8 flex items-start">
+                    <img src="images/icons8-software-engineering-100.png" alt="Graduation Cap Icon"
+                        class="w-6 h-6 mr-4 mt-1">
+                    <div>
+                        <h3 class="text-xl font-semibold" data-en="State University of Santa Catarina (UDESC)"
+                            data-pt="Universidade do Estado de Santa Catarina (UDESC)">Universidade do Estado de Santa
+                            Catarina (UDESC)</h3>
+                        <p class="text-gray-400" data-en="Bachelor Degree, Information Systems, Feb 2013"
+                            data-pt="Bacharelado em Sistemas de Informação, Fev de 2013">Bacharelado em Sistemas de
+                            Informação, Fev de 2013</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
+
+
         <section id="skills" class="p-6 my-6 w-full md:w-2/3">
-            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Habilidades</h2>
+            <div class="flex items-center mb-4">
+                <img src="images/icons8-skills-100.png" alt="Skills Icon" class="w-10 h-10 mr-2">
+                <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 highlight" data-en="Skills" data-pt="Habilidades">Habilidades</h2>
+            </div>
+            <div class="skills-content">
+                <!-- Programming Languages -->
+                <div class="skills-category mt-8">
+                    <h3 class="text-xl font-semibold" data-en="Programming Languages" data-pt="Linguagens de Programação">Linguagens de Programação</h3>
+                    <div class="flex flex-wrap mt-2">
+                        <a href="https://www.python.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=python" width="40" height="40" alt="Python"></a>
+                        <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=cs" width="40" height="40" alt="C#"></a>
+                        <a href="https://www.embarcadero.com/products/delphi" class="mr-4 mb-2"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968252.png" width="40" height="40" alt="Delphi"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=js" width="40" height="40" alt="JavaScript"></a>
+                        <a href="https://www.typescriptlang.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=ts" width="40" height="40" alt="TypeScript"></a>
+                        <a href="https://www.java.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=java" width="40" height="40" alt="Java"></a>
+                        <a href="https://www.ruby-lang.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=ruby" width="40" height="40" alt="Ruby"></a>
+                        <a href="https://www.markdownguide.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=md" width="40" height="40" alt="Markdown"></a>
+                        <a href="https://www.latex-project.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=latex" width="40" height="40" alt="LaTeX"></a>
+                    </div>
+                </div>
+        
+                <!-- Frameworks -->
+                <div class="skills-category mt-8">
+                    <h3 class="text-xl font-semibold" data-en="Frameworks" data-pt="Frameworks">Frameworks</h3>
+                    <div class="flex flex-wrap mt-2">
+                        <a href="https://www.djangoproject.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=django" width="40" height="40" alt="Django"></a>
+                        <a href="https://fastapi.tiangolo.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=fastapi" width="40" height="40" alt="FastAPI"></a>
+                        <a href="https://flask.palletsprojects.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=flask" width="40" height="40" alt="Flask"></a>
+                        <a href="https://dotnet.microsoft.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=dotnet" width="40" height="40" alt=".NET"></a>
+                        <a href="https://nodejs.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=nodejs" width="40" height="40" alt="Node.js"></a>
+                        <a href="https://expressjs.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=express" width="40" height="40" alt="Express.js"></a>
+                        <a href="https://rubyonrails.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=rails" width="40" height="40" alt="Ruby on Rails"></a>
+                    </div>
+                </div>
+        
+                <!-- Databases -->
+                <div class="skills-category mt-8">
+                    <h3 class="text-xl font-semibold" data-en="Databases" data-pt="Bancos de Dados">Bancos de Dados</h3>
+                    <div class="flex flex-wrap mt-2">
+                        <a href="https://www.postgresql.org" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=postgres" width="40" height="40" alt="PostgreSQL"></a>
+                        <a href="https://www.oracle.com/database/" class="mr-4 mb-2"><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/oracle_logo_icon_168918.png" width="40" height="40" alt="Oracle"></a>
+                        <a href="https://www.sqlite.org/index.html" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=sqlite" width="40" height="40" alt="SQLite"></a>
+                        <a href="https://www.mysql.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=mysql" width="40" height="40" alt="MySQL"></a>
+                        <a href="https://dbeaver.io/" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=dbeaver" width="40" height="40" alt="DBeaver"></a>
+                    </div>
+                </div>
+        
+                <!-- Tools -->
+                <div class="skills-category mt-8">
+                    <h3 class="text-xl font-semibold" data-en="Tools" data-pt="Ferramentas">Ferramentas</h3>
+                    <div class="flex flex-wrap mt-2">
+                        <a href="https://git-scm.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=git" width="40" height="40" alt="Git"></a>
+                        <a href="https://www.docker.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=docker" width="40" height="40" alt="Docker"></a>
+                        <a href="https://www.atlassian.com/software/jira" class="mr-4 mb-2"><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png" width="40" height="40" alt="Jira"></a>
+                        <a href="https://www.jenkins.io" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=jenkins" width="40" height="40" alt="Jenkins"></a>
+                        <a href="https://code.visualstudio.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=vscode" width="40" height="40" alt="Visual Studio Code"></a>
+                        <a href="https://www.postman.com" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=postman" width="40" height="40" alt="Postman"></a>
+                        <a href="https://www.notion.so" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=notion" width="40" height="40" alt="Notion"></a>
+                    </div>
+                </div>
+        
+                <!-- Operating Systems -->
+                <div class="skills-category mt-8">
+                    <h3 class="text-xl font-semibold" data-en="Operating Systems" data-pt="Sistemas Operacionais">Sistemas Operacionais</h3>
+                    <div class="flex flex-wrap mt-2">
+                        <a href="https://www.apple.com/br/macos/" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=apple" width="40" height="40" alt="macOS"></a>
+                        <a href="https://www.microsoft.com/pt-br/windows/" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=windows" width="40" height="40" alt="Windows"></a>
+                        <a href="https://ubuntu.com/" class="mr-4 mb-2"><img src="https://skillicons.dev/icons?i=ubuntu" width="40" height="40" alt="Ubuntu"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="certifications" class="p-6 my-6 w-full md:w-2/3">
+            <div class="flex items-center mb-4">
+                <img src="images/icons8-diploma-1-100.png" alt="Certifications Icon" class="w-10 h-10 mr-2">
+                <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 highlight" data-en="Certifications"
+                    data-pt="Certificações">Certificações</h2>
+            </div>
             <ul class="list-disc ml-5">
-                <li>Delphi</li>
-                <li>SQL</li>
-                <li>Python</li>
+                <li data-en="Microsserviços: padrões de projeto - Alura (Jul 2023)"
+                    data-pt="Microsserviços: padrões de projeto - Alura (Jul 2023)">Microsserviços: padrões de projeto -
+                    Alura (Jul 2023)</li>
+                <li data-en="Comunicação e Oratória - Escola Conquer (Abr 2023)"
+                    data-pt="Comunicação e Oratória - Escola Conquer (Abr 2023)">Comunicação e Oratória - Escola Conquer
+                    (Abr 2023)</li>
+                <li data-en="Aprender a aprender: técnicas para seu autodesenvolvimento - Alura (Fev 2023)"
+                    data-pt="Aprender a aprender: técnicas para seu autodesenvolvimento - Alura (Fev 2023)">Aprender a
+                    aprender: técnicas para seu autodesenvolvimento - Alura (Fev 2023)</li>
+                <li data-en="JavaScript: explorando a linguagem - Alura (Mai 2022)"
+                    data-pt="JavaScript: explorando a linguagem - Alura (Mai 2022)">JavaScript: explorando a linguagem -
+                    Alura (Mai 2022)</li>
+                <li data-en="API com Django 3: Django Rest Framework - Alura (Mar 2022)"
+                    data-pt="API com Django 3: Django Rest Framework - Alura (Mar 2022)">API com Django 3: Django Rest
+                    Framework - Alura (Mar 2022)</li>
+                <li data-en="Python 3 parte 1: Introdução à nova versão da linguagem - Alura (Fev 2022)"
+                    data-pt="Python 3 parte 1: Introdução à nova versão da linguagem - Alura (Fev 2022)">Python 3 parte
+                    1: Introdução à nova versão da linguagem - Alura (Fev 2022)</li>
+                <li data-en="Python 3 parte 2: avançando na linguagem - Alura (Fev 2022)"
+                    data-pt="Python 3 parte 2: avançando na linguagem - Alura (Fev 2022)">Python 3 parte 2: avançando na
+                    linguagem - Alura (Fev 2022)</li>
+                <li data-en="Desenvolvimento para Internet e Banco de Dados com Python e Django - DIO (Set 2021)"
+                    data-pt="Desenvolvimento para Internet e Banco de Dados com Python e Django - DIO (Set 2021)">
+                    Desenvolvimento para Internet e Banco de Dados com Python e Django - DIO (Set 2021)</li>
+                <li data-en="Introdução à programação com Python - DIO (Ago 2021)"
+                    data-pt="Introdução à programação com Python - DIO (Ago 2021)">Introdução à programação com Python -
+                    DIO (Ago 2021)</li>
+                <li data-en="Projetos Ágeis com SCRUM - DIO (Ago 2021)"
+                    data-pt="Projetos Ágeis com SCRUM - DIO (Ago 2021)">Projetos Ágeis com SCRUM - DIO (Ago 2021)</li>
+                <li data-en="Time Management and Productivity - Future Dojo (Jul 2021)"
+                    data-pt="Time Management and Productivity - Future Dojo (Jul 2021)">Time Management and Productivity
+                    - Future Dojo (Jul 2021)</li>
             </ul>
         </section>
 
         <section id="contact" class="p-6 my-6 w-full md:w-2/3">
-            <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 mb-4">Contato</h2>
-            <div class="flex justify-center md:justify-start space-x-2 mt-4">
+            <div class="flex items-center mb-4">
+                <img src="images/icons8-novo-contato-100.png" alt="Contact Icon" class="w-10 h-10 mr-2">
+                <h2 class="text-2xl font-semibold border-b-2 border-green-500 pb-2 highlight" data-en="Contact"
+                    data-pt="Contato">Contato</h2>
+            </div>
+            <div class="flex justify-start space-x-2 mt-4">
                 <a href="mailto:thiagoarturschumann@gmail.com" class="text-white px-2 py-2 rounded-full">
                     <img src="https://skillicons.dev/icons?i=gmail" class="w-8 h-8" alt="Gmail">
                 </a>
-                <a href="https://www.linkedin.com/in/thiagoschumann/" target="_blank" class="text-white px-2 py-2 rounded-full">
+                <a href="https://www.linkedin.com/in/thiagoschumann/" target="_blank"
+                    class="text-white px-2 py-2 rounded-full">
                     <img src="https://skillicons.dev/icons?i=linkedin" class="w-8 h-8" alt="LinkedIn">
                 </a>
                 <a href="https://github.com/ThiagoSchumann" target="_blank" class="text-white px-2 py-2 rounded-full">
                     <img src="https://skillicons.dev/icons?i=github" class="w-8 h-8" alt="GitHub">
                 </a>
                 <a href="https://wa.me/5547991254268" target="_blank" class="text-white px-2 py-2 rounded-full">
-                    <img src="https://github.com/TIM168/skill_icon/blob/main/WhatsApp/whatsapp.png?raw=true" class="w-8 h-8" alt="WhatsApp">
+                    <img src="https://github.com/TIM168/skill_icon/blob/main/WhatsApp/whatsapp.png?raw=true"
+                        class="w-8 h-8" alt="WhatsApp">
                 </a>
             </div>
         </section>
+
     </main>
 
-    <footer class="bg-gray-800 text-white text-center p-4">
+
+    <footer class="text-center p-4">
         <p>&copy; 2024 Thiago Artur Schumann. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        document.getElementById('download-cv').addEventListener('click', function(e) {
-            e.preventDefault();
-            fetch('resources/Thiago-Schumann-CV.pdf')
-                .then(response => response.blob())
-                .then(blob => {
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.style.display = 'none';
-                    a.href = url;
-                    a.download = 'Thiago-Schumann-CV.pdf';
-                    document.body.appendChild(a);
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                })
-                .catch(() => alert('Falha ao baixar o arquivo.'));
-        });
-    </script>
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>
